@@ -1,11 +1,14 @@
 package Task_1;
 
 import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-public abstract class Shape{
-    Point p;
-    public Shape(double x, double y) {
-        p = new Point(x,y);
+
+public abstract class Shape {
+    protected Color color;
+    protected int x,y;
+    public Shape(Color color, int x, int y) {
+        this.color = color;
+        this.x = x;
+        this.y = y;
     }
+    abstract void draw(Graphics g);
 }
